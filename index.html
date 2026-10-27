@@ -6525,6 +6525,9 @@ html.fw-motion.fw-motion-timeout [data-reveal], html.fw-motion.fw-motion-timeout
   .press-viewer{width:100vw;height:100dvh;border-radius:0}
 }
 @media (prefers-reduced-motion:reduce){.press-dot{animation:none}.press-pill{transition:none}}
+@media (min-width:640px){.fw-pills{flex-direction:row;gap:.6rem}}
+/* leadership: centre the bio beside the photo column on desktop */
+@media (min-width:1024px){#leadership .lead-bio{align-self:center}}
 /* news viewer: "Featured in" quote card + larger CTA */
 #press-viewer .pv-slide{justify-content:center;gap:1.25rem;cursor:pointer}
 .pv-qcard{position:relative;display:flex;flex-direction:column;gap:.75rem;flex-shrink:0;min-height:367px;box-sizing:border-box;padding:1.35rem 1.35rem 1.1rem;border-radius:.9rem;overflow:hidden;background:linear-gradient(180deg,#fffefb 0%,#f7f4ec 100%);color:#141414;box-shadow:0 28px 56px -24px #000e,0 0 0 1px #ffffff14}
@@ -6593,7 +6596,7 @@ html.fw-motion.fw-motion-timeout [data-reveal], html.fw-motion.fw-motion-timeout
       <div class="lg:grid lg:grid-cols-12 lg:items-center lg:gap-12">
         <div class="lg:col-span-6">
           <h1 class="rise-in delay-1 h-hero text-balance" style="max-width:none;font-size:clamp(2.7rem,min(6.4vw,9.4vh),4.4rem);line-height:1.12;letter-spacing:-0.012em"><span class="font-medium italic text-[1.22em] tracking-[0.02em] text-[var(--color-accent-hot)] font-[family-name:var(--font-newsreader)]">Your partner</span><span> for the next phase of growth.</span></h1>
-          <p class="rise-in delay-2 lede mt-6 lg:mt-7 max-w-[46ch]">We act as the bridge between strong businesses and <span style="white-space:nowrap">long-term</span> capital, focusing on creating maximum value in the transaction for both parties.</p>
+          <p class="rise-in delay-2 lede mt-6 lg:mt-7 max-w-[46ch]">We act as the bridge between strong businesses and <span style="white-space:nowrap">long-term</span> capital, focusing on creating maximum value in the transaction for all stakeholders.</p>
           <div class="rise-in delay-3 mt-7 lg:mt-9 flex flex-wrap items-center gap-3">
             <a class="inline-flex min-h-11 justify-center items-center rounded-lg bg-[var(--color-cta)] px-6 py-3 text-[14px] font-semibold text-[var(--color-cta-text)] transition-colors hover:bg-[var(--color-cta-hover)]" href="#equity-research">See what each desk does <span aria-hidden="true">&nbsp;→</span></a>
           </div>
@@ -6650,7 +6653,6 @@ html.fw-motion.fw-motion-timeout [data-reveal], html.fw-motion.fw-motion-timeout
         <p class="font-mono text-[13px] tracking-[0.16em] text-[var(--color-accent)]">02</p>
         <h2 class="mt-3 h-display text-balance text-[clamp(2.2rem,4.2vw,3.25rem)]">Fixed Income</h2>
         <p class="mt-3 font-medium italic text-[clamp(1.25rem,2vw,1.6rem)] leading-snug text-[var(--color-accent-hot)] font-[family-name:var(--font-newsreader)]">Every issuer reviewed before it reaches you.</p>
-        <p class="mt-5 text-[15px] leading-relaxed text-[var(--color-text-2)] max-w-[42ch]">Selecting listed and unlisted fixed income opportunities for investors. Each one passes our own credit review before we offer it.</p>
       </aside>
       <ul class="card-stack lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-3" data-reveal-scope>
         <li data-reveal="right"><div class="h-full card-surface card-cream card-lift rounded-xl"><div class="card-body">
@@ -6733,14 +6735,10 @@ html.fw-motion.fw-motion-timeout [data-reveal], html.fw-motion.fw-motion-timeout
         </div>
         <a class="mt-7 inline-flex min-h-11 items-center gap-2 rounded-lg border border-[var(--color-line-strong)] px-5 py-2.5 text-[13.5px] font-medium text-[var(--color-text)] hover:bg-[var(--color-hover)] transition-colors" href="https://www.linkedin.com/in/kayan-irani-3449b014a/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>View Kayan’s LinkedIn profile ↗</a>
       </aside>
-      <div class="lg:col-span-8" data-reveal-scope>
+      <div class="lg:col-span-8 lead-bio" data-reveal-scope>
         <div class="space-y-5 text-[16px] leading-[1.75] text-[var(--color-text-2)] max-w-[66ch]" data-reveal>
           <p class="text-[clamp(1.2rem,1.9vw,1.45rem)] leading-[1.5] tracking-[-0.01em] text-[var(--color-text)]">Kayan Irani is Managing Partner at Front Wave. He was previously Associate Vice President, Capital Markets, at axio (formerly Capital Float), where he led lender partnerships and debt raising.</p>
         </div>
-        <ol class="mt-10 rounded-xl card-surface divide-y divide-[var(--color-line)]" data-reveal aria-label="Career and education">
-          <li class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-6 px-5 py-4 sm:px-6"><span class="font-mono text-[10.5px] uppercase tracking-[0.14em] text-[var(--color-accent)] sm:w-28 shrink-0">Present</span><span class="min-w-0"><span class="block text-[15px] font-semibold text-[var(--color-text)]">Managing Partner</span><span class="block text-[13.5px] text-[var(--color-text-3)]">Front Wave</span></span></li>
-          <li class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-6 px-5 py-4 sm:px-6"><span class="font-mono text-[10.5px] uppercase tracking-[0.14em] text-[var(--color-text-3)] sm:w-28 shrink-0">Previously</span><span class="min-w-0"><span class="block text-[15px] font-semibold text-[var(--color-text)]">Associate Vice President, Capital Markets</span><span class="block text-[13.5px] text-[var(--color-text-3)]">axio (formerly Capital Float)</span></span></li>
-        </ol>
       </div>
     </div>
   </section>
@@ -15889,6 +15887,7 @@ vec4 blend(const in vec4 x, const in vec4 y, const in float opacity) {
     };
   }
   var POP_SPRING = typeof window !== "undefined" ? springEasing() : null;
+  var SMALL = typeof window !== "undefined" && matchMedia("(max-width: 639px)").matches;
   var VARIANTS = {
     reveal: (el) => {
       const y = parseFloat(el.dataset.revealY ?? 24);
@@ -15903,18 +15902,18 @@ vec4 blend(const in vec4 x, const in vec4 y, const in float opacity) {
       to: { opacity: 1, transform: "none" },
       duration: 700
     }),
-    left: () => ({
+    left: () => SMALL ? { from: { opacity: 0, transform: "translateY(14px)" }, to: { opacity: 1, transform: "none" }, duration: 550 } : ({
       from: { opacity: 0, transform: "translateX(-48px)", filter: "blur(6px)" },
       to: { opacity: 1, transform: "none", filter: "blur(0px)" },
       duration: 800
     }),
-    right: () => ({
+    right: () => SMALL ? { from: { opacity: 0, transform: "translateY(14px)" }, to: { opacity: 1, transform: "none" }, duration: 550 } : ({
       from: { opacity: 0, transform: "translateX(48px)", filter: "blur(6px)" },
       to: { opacity: 1, transform: "none", filter: "blur(0px)" },
       duration: 800
     }),
     pop: () => ({
-      from: { opacity: 0, transform: "scale(0.4) rotate(-30deg)" },
+      from: { opacity: 0, transform: "scale(0.6) rotate(-12deg)" },
       to: { opacity: 1, transform: "none" },
       duration: POP_SPRING.duration,
       easing: POP_SPRING.easing,
